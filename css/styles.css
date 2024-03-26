@@ -1,0 +1,40 @@
+html {
+	background-image: url("img/Pizza-background.jpg" );
+    background-attachment: fixed; 
+} 
+
+#navigation{
+	float: right;
+	height: 100%;
+	color: #333;
+	width: 200px;
+	background-color: #ffffff;
+	margin: auto;
+	padding: 2em 2em 4em 2em;
+	border-radius: 5px;
+}
+
+h1{
+	background-color: rgb(255, 225, 0);
+	text-align: center;
+}
+
+body {
+	font-size: 100%;
+	font-family: "Kanit", sans-serif;
+	color: #333;
+	width: 760px;
+	background-color: #ffffff;
+	margin: 10% auto;
+	padding: 2em 2em 2em 2em;
+	border-radius: 10px;
+}
+h1 {
+    font-size: 50px;
+    color:red;
+}
+
+.checkbox-container label {
+    display: block;
+
+}

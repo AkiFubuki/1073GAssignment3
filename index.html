@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Pizza Order Form</title>
+        <meta name="author" content="Pizza order " >
+        <meta name="description" content="A pizza order page">
+        <script src="js/scripts.js">defer</script>
+        <link rel="stylesheet" href="css/styles.css" type="text/css" >
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+        <h1>Pizza Order Form</h1>
+        </header>
+        <main>
+            <form id="pizzaForm">
+                <!-- Name -->
+                <div>
+                    <b>Pizza :</b><br>
+                    <select name="pizza" id="pizza" required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="Cheese">Cheese</option>
+                        <option value="Pepperoni">Pepperoni</option>
+                        <option value="Hawaiian">Hawaiian</option>
+                        <option value="Supreme">Supreme</option>
+                        <option value="BBQ Chicken">BBQ Chicken</option>
+                    </select>
+                </div><br>
+                <!--Size-->
+                <label for="pizzaSize">Choose Pizza Size:</label>
+                <select id="pizzaSize" name="pizzaSize">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select><br><br>
+                <!-- quantity -->
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1"><br><br>
+                <!-- toppings -->
+                <div class="checkbox-container">
+                    <b>Toppings:</b><br>
+                    <input type="checkbox" name="topping" id="pepperoni" value="pepperoni" >Pepperoni <br>                     
+                    <input type="checkbox" name="topping" id="mushroom" value="mushroom" >Mushroom <br>
+                    <input type="checkbox" name="topping" id="Extracheese" value="Extra cheese" >Extra cheese <br>
+                    <input type="checkbox" name="topping" id="Sausage" value="Sausage" >Sausage<br>
+                    <input type="checkbox" name="topping" id="Onion" value="Onion" >Onion <br>
+                    <input type="checkbox" name="topping" id="Pepper" value="Pepper" >Pepper <br>
+                    <input type="checkbox" name="topping" id="Garlic" value="Garlic" >Garlic <br>
+                    <input type="checkbox" name="topping" id="Tomato" value="Tomato" >Tomato <br><br>
+                </div>
+                <!-- Crust -->
+                <div>
+                    <label for="crust"><b>Crust Type:</b></label><br>
+                    <select name="crust" id="crust" required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="Stuffed Crust">Stuffed Crust</option>
+                        <option value="Cracker Crust">Cracker Crust</option>
+                        <option value="Flat Bread Crust">Flat Bread Crust</option>
+                        <option value="Thin Crust">Thin Crust</option>
+                        <option value="Cheese Crust">Cheese Crust</option>
+                        <option value="Thick Crust">Thick Crust</option>
+                    </select>
+                </div><br>
+                <!-- Shape(square or round) -->
+                <div>
+                    <b>Shape (square or round):</b><br>
+                    <select id="shape" name="shape">
+                        <option value="square">Square</option>
+                        <option value="round">Round</option>
+                    </select><br>
+                </div><br>
+                <!-- Delivery type -->
+                <div>
+                    <label for="DeliveryType"> <b>Delivery type</b></label>
+                    <br>
+                    <select name="DeliveryType" id="DeliveryType" required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="Eat-in">Eat-in</option>
+                        <option value="Delivery">Delivery</option>
+                        <option value="Take Out">Take Out</option>
+                    </select>
+                </div>
+                <br>
+                <button type="button" onclick="orderPizza()">Place Order</button>
+            </form>
+
+            <div id="pizzaDescription"></div>
+            <p id="studentInfo"></p>
+        </main>
+    </body>
+</html>
